@@ -24,7 +24,7 @@ Serão, também, abordadas aplicações de RE, um exemplo prático e um outro te
 
 ## Objetivos
 
-RE é uma área muito especializada e requer um `conhecimento consistente de programação e Assembly`.
+RE é uma área muito especializada e requer um `conhecimento vasto de programação e Assembly`.
 
 Qualquer uma das seguintes aplicações de RE requer vasta experiência e, em algumas, é necessário ser um perito:
 - 1 - Encontrar vulnerabilidades, no intuito de melhorar a segurança de um programa;
@@ -53,7 +53,7 @@ Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que pe
 
 ### IDA Pro
 
-Certamente é o software mais completo, e definitivamente “industry standard”. Tem um excelente suporte de plugins e a geração de pseudocódigo é a melhor. A IDA tem uma versão gratuita mas é bastante limitada porque só trabalha com x86 (32 bits) e x86-64 e apenas vem com um decompilador para 64 bits. Ou seja, se pretendemos trabalhar com outras arquiteturas temos que ir por outras opções, pois a versão Pro custa 2000€ e cada decompilador extra são no mínimo 2765€! https://www.hex-rays.com/cgi-bin/quote.cgi/products
+Certamente é o software mais completo, e definitivamente “industry standard”. Tem um excelente suporte de plugins e a geração de pseudocódigo é a melhor. A IDA tem uma versão gratuita mas é bastante limitada porque só trabalha com x86 (32 bits) e x86-64 e apenas vem com um decompilador para 64 bits. Ou seja, se pretendemos trabalhar com outras arquiteturas temos que ir por outras opções, pois a versão Pro custa 2000€ e cada decompilador extra são no mínimo 2765€! [Fonte](https://www.hex-rays.com/cgi-bin/quote.cgi/products)
 Isto cria uma imagem engraçada, pois originalmente a pessoa que crackeou IDA Pro para os outros puderem piratear deve tê-lo feito com o próprio IDA Pro.  
 
 ### Radare2
@@ -85,22 +85,22 @@ Agora executamos o programa
 Como podemos ver, não sabemos o que introduzir, e ataques de brute force não parecem fazer sentido aqui (para além de não ser o objetivo). 
 
 Executamos o comando strings para achar o texto claro existente no programa que poderá dar algumas dicas ou uma chave hardcoded. 
-https://miro.medium.com/max/720/1*kMSfVijiOhLlIujAM2RUkg.png
+![](https://miro.medium.com/max/720/1*kMSfVijiOhLlIujAM2RUkg.png)
 
 - Enter your key :
 - Good job mate, now go keygen me - aparece quando a passe estiver certa
 - nope - aparece quando falha a passe
 Como podemos observar, não há nada mais além disso que nos ajude. Portanto só nos resta usar ferramentas dedicadas. Aqui usamos Ghidra, que para a dificuldade deste desafio, é um pouco overkill. Vamos abrir e analisar o programa. Selecionamos a função main do lado esquerdo do menu.
 
-https://miro.medium.com/max/640/1*IAtGAjAyU0mRUSlEYZPdrg.png
+![](https://miro.medium.com/max/640/1*IAtGAjAyU0mRUSlEYZPdrg.png)
 
 E aqui temos pseudocódigo gerado. Tem aspeto muito sujo porque os nomes e tipos das variáveis não são os convencionais. Mas lendo com calma conseguimos chegar que local_14 é a chave que inserimos porque está no scanf. iVar1 é o resultado da validação da chave usando a função validate_key. Portanto só nos resta ver essa função.
 
-https://miro.medium.com/max/598/1*ypSPaH2Rje3nI15hh0e58Q.png
+![](https://miro.medium.com/max/598/1*ypSPaH2Rje3nI15hh0e58Q.png)
 
 Nota-se que a função no fundo verifica se a chave é um múltiplo de 1223 usando o módulo operador. Portanto inserindo 1223, por exemplo, vai resolver o desafio.
 
-https://miro.medium.com/max/720/1*JBfIi2iIdHI6xz6bwBmfiw.png
+![](https://miro.medium.com/max/720/1*JBfIi2iIdHI6xz6bwBmfiw.png)
 
 Cá está e está concluído o desafio! Com este exemplo simples claramente vemos a vulnerabilidade mas esta metodologia aplica-se independentemente da escala.
 
@@ -113,4 +113,15 @@ Remover proteções DRM (especialmente de jogos com Denuvo) é uma das tarefas m
 
 Esta é uma rede subterrânea onde os maiores crackers partilham o conteúdo pirateado. Qualquer filme, série, anime, videojogo que seja pago ou tenha proteção DRM tem alta chance de se originar daqui. 
 Indivíduous ou equipas “na cena” compram o conteúdo que pretendem crackear e retiram as proteções. Ao lançar o conteúdo no que se designa por “Scene Release”, os autores deste lançamento costumam lançar um gráfico de arte em ASCII através de ficheiros .nfo onde podem fazer comentários, recrutar. Ganham crédito por estes lançamentos.
+
+![](https://defacto2.net/images/uuid/original/54acf284-7df8-4764-b5ba-00b80f534c26.png)
+
+Através desses créditos, eles adquirem conteúdo pirateado proveniente de outros grupos e assim há uma economia interna baseada em meritocracia. 
+Claro que na vida real temos conteúdo pirateado facilmente disponível até que chegue. Isto porque há crackers que não estão nessa rede. E também há pessoas que estão em Warez que se aproveitam deste conteúdo para lançar publicamente em torrents, P2P (peer-to-peer). 
+Warez Scene é um grande “rabbit hole” e eu só passei pela superfície do iceberg.
+Este [post](https://reddit.com/r/CrackWatch/comments/92uz49/the_warez_scene_how_it_works/) explica com enorme detalhe o que é.
+
+## Conclusão
+
+Aprendemos o que é código Assembly e como podemos usar, para que serve engenharia reversa e as suas aplicações tal como um exemplo prático. Vimos também um efeito curioso que começou a desenvolver há mais de 20 anos a propagação de conteúdo pirateado e como relativamente escondido são as pessoas por detrás.
 
