@@ -39,11 +39,10 @@ Os pontos 1 e 4 serão os principais a serem abordados.
 
 ![Processo de Engenharia Reversa](https://cdn.discordapp.com/attachments/855373378717351936/1047283111953702962/Processo.png)
 
-Grande parte dos computadores (mais concretamente os CPUs) hoje em dia usam a arquitetura x86-64. Para um programa correr é necessário primeiro que este programa seja compilado. O código fonte é introduzido num compilador, o mais comum é o GNU C Compiler (gcc), e de seguida traduzido para código máquina que o computador entende e consegue executar.
+Grande parte dos computadores - mais concretamente, os CPUs -, hoje em dia, utilizam `arquitetura x86-64`. Para um programa correr, é necessário que este seja compilado, previamente. O `código-fonte` é introduzido num `compilador` (o mais comum é o GNU C Compiler - GCC) e, em seguida, traduzido para `código-máquina`, que o computador entende e consegue executar.
 
-Se pretendemos ir pelo processo inverso temos que compreender Assembly (não é uma tarefa fácil!). É uma linguagem intermédia entre código máquina e código fonte. Cada arquitetura, linguagem de programação e compilador tem maneiras diferentes de gerar código máquina que por sua vez também vai ter código Assembly diferente.
+Indo pelo `processo inverso`, é necessário compreender `Assembly`, que pode não ser uma tarefa fácil. É uma linguagem intermédia (entre código-máquina e código-fonte). Cada arquitetura, linguagem de programação e compilador possuem `diferentes formas de gerar código-máquina`, o que significa que o código em Assembly também apresentará diferenças.
 
-No processo RE, um humano normal não consegue perceber código máquina. 
-Para isso temos em primeiro lugar um dissassembler que mostra o código Assembly equivalente e dá o ponto de partida para a compreensão do programa.
-Em seguida podemos usar um decompilador e outras ferramentas que permitem a geração de pseudocódigo. Decompiladores são muito poderosos porque usam técnicas avançadas de deobfuscação e heurísticas para gerar (pseudo)código de alto nível, mas não são obrigatórios para o processo. 
+No processo RE, normalmente, `uma pessoa não compreende o código-máquina`. Para isso, é necessária a posse de um *`Dissassembler`*, que mostra o código Assembly equivalente, sendo o `ponto de partida` para a compreensão do programa em causa.
+Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que permitem a geração de `pseudocódigo`. Decompiladores são muito poderosos, pois utilizam técnicas avançadas de `deobfuscação` e heurísticas para `gerar (pseudo)código de alto nível`.
 
