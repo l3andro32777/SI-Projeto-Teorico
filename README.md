@@ -37,7 +37,7 @@ Os pontos 1 e 4 serão os principais a serem abordados.
 
 ## Assembly x86-64
 
-![Processo de Engenharia Reversa](/Imagens/Processo.png)
+![Processo de Engenharia Reversa](https://cdn.discordapp.com/attachments/855373378717351936/1047283111953702962/Processo.png)
 
 Grande parte dos computadores (mais concretamente os CPUs) hoje em dia usam a arquitetura x86-64. Para um programa correr é necessário primeiro que este programa seja compilado. O código fonte é introduzido num compilador, o mais comum é o GNU C Compiler (gcc), e de seguida traduzido para código máquina que o computador entende e consegue executar.
 
