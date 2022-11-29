@@ -1,4 +1,3 @@
-a
 # Reverse Engineering - Projeto Teórico
 
 ## Unidade Curricular
@@ -45,25 +44,28 @@ Grande parte dos computadores - mais concretamente, os CPUs -, hoje em dia, util
 Indo pelo `processo inverso`, é necessário compreender `Assembly`, que pode não ser uma tarefa fácil. É uma linguagem intermédia (entre código-máquina e código-fonte). Cada arquitetura, linguagem de programação e compilador possuem `diferentes formas de gerar código-máquina`, o que significa que o código em Assembly também apresentará diferenças.
 
 Em RE, normalmente, `código-máquina não é compreendido`. Para isso, é necessária a posse de um *`Dissassembler`*, que mostra o código Assembly equivalente, sendo o `ponto de partida` para a compreensão do programa em causa.
-Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que permitem a geração de `pseudocódigo`. Decompiladores são muito poderosos, pois utilizam técnicas avançadas de `deobfuscação` e heurísticas para `gerar (pseudo)código de alto nível`.
+Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que permitem a geração de `pseudocódigo`. Descompiladores são muito poderosos, pois utilizam técnicas avançadas de `deobfuscação` e heurísticas para `gerar (pseudo)código de alto nível`.
 
 ![Processo de Engenharia Reversa](https://cdn.discordapp.com/attachments/855373378717351936/1047267281840902174/image.png)
+
+Verifica-se claramente uma redução de complexidade e um aumento de compreensão 
 
 
 ## Ferramentas
 
 ### IDA Pro
 
-Certamente é o software mais completo, e definitivamente “industry standard”. Tem um excelente suporte de plugins e a geração de pseudocódigo é a melhor. A IDA tem uma versão gratuita mas é bastante limitada porque só trabalha com x86 (32 bits) e x86-64 e apenas vem com um decompilador para 64 bits. Ou seja, se pretendemos trabalhar com outras arquiteturas temos que ir por outras opções, pois a versão Pro custa 2000€ e cada decompilador extra são no mínimo 2765€! [Fonte](https://www.hex-rays.com/cgi-bin/quote.cgi/products)
+Certamente é o software mais completo, e definitivamente “industry standard”. Tem um excelente suporte de plugins e a geração de pseudocódigo é a melhor. A IDA tem uma versão gratuita mas é bastante limitada porque só trabalha com x86 (32 bits) e x86-64 e apenas vem com um descompilador para 64 bits. Ou seja, se pretendemos trabalhar com outras arquiteturas temos que ir por outras opções, pois a versão Pro custa 2000€ e cada descompilador extra são no mínimo 2765€! [Fonte](https://www.hex-rays.com/cgi-bin/quote.cgi/products)
+
 Isto cria uma imagem engraçada, pois originalmente a pessoa que crackeou IDA Pro para os outros puderem piratear deve tê-lo feito com o próprio IDA Pro.  
 
 ### Radare2
 
-É um programa de linha de comandos mais indicado para RE de menor escala. Tem um grande fator de personalização e usa os decompiladores de Ghidra. Para certas tarefas e casos específicos, radare2 é o melhor.
+É um programa de linha de comandos mais indicado para RE de menor escala. Tem um grande fator de personalização e usa os descompiladores de Ghidra. Para certas tarefas e casos específicos, radare2 é o melhor.
 
 ### Ghidra
 
-Ghidra é um competidor recente ao IDA Pro que foi lançado em 2019 e foi desenvolvido pela NSA dos Estados Unidos. É gratuito e open source e tem o melhor suporte de decompiladores e do API. Ghidra pretende destacar-se pois oferece colaboração integrada em projetos de RE. Em suma, tem muito potencial para crescimento com o suporte da comunidade.
+Ghidra é um competidor recente ao IDA Pro que foi lançado em 2019 e foi desenvolvido pela NSA dos Estados Unidos. É gratuito e open source e tem o melhor suporte de descompiladores e do API. Ghidra pretende destacar-se pois oferece colaboração integrada em projetos de RE. Em suma, tem muito potencial para crescimento com o suporte da comunidade.
 
 ## Demonstração Prática
 Vamos agora fazer um simples desafio ou CTF que se designa por “crackme”. Isto são programas especialmente feitos para testar as capacidades de RE. O objetivo do crackme é perceber como o programa funciona para podermos inserir a palavra passe certa sem termos isso guardado em texto em algum lado. No final inserimos a passe certa para confirmar que completamos o desafio.
