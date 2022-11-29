@@ -1,2 +1,6 @@
-# SI-Projeto-Teorico
-Repositório para o Projeto Teórico da Unidade Curricular de Segurança Informática.
+# Reverse Engineering - Projeto Teórico (SI)
+
+Leandro Francisco - 202001310
+Daniel Lachkeev - 201801899
+
+
