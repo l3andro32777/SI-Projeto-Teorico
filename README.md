@@ -48,3 +48,69 @@ Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que pe
 
 ![Processo de Engenharia Reversa](https://cdn.discordapp.com/attachments/855373378717351936/1047267281840902174/image.png)
 
+
+## Ferramentas
+
+### IDA Pro
+
+Certamente é o software mais completo, e definitivamente “industry standard”. Tem um excelente suporte de plugins e a geração de pseudocódigo é a melhor. A IDA tem uma versão gratuita mas é bastante limitada porque só trabalha com x86 (32 bits) e x86-64 e apenas vem com um decompilador para 64 bits. Ou seja, se pretendemos trabalhar com outras arquiteturas temos que ir por outras opções, pois a versão Pro custa 2000€ e cada decompilador extra são no mínimo 2765€! https://www.hex-rays.com/cgi-bin/quote.cgi/products
+Isto cria uma imagem engraçada, pois originalmente a pessoa que crackeou IDA Pro para os outros puderem piratear deve tê-lo feito com o próprio IDA Pro.  
+
+### Radare2
+
+É um programa de linha de comandos mais indicado para RE de menor escala. Tem um grande fator de personalização e usa os decompiladores de Ghidra. Para certas tarefas e casos específicos, radare2 é o melhor.
+
+### Ghidra
+
+Ghidra é um competidor recente ao IDA Pro que foi lançado em 2019 e foi desenvolvido pela NSA dos Estados Unidos. É gratuito e open source e tem o melhor suporte de decompiladores e do API. Ghidra pretende destacar-se pois oferece colaboração integrada em projetos de RE. Em suma, tem muito potencial para crescimento com o suporte da comunidade.
+
+## Demonstração Prática
+Vamos agora fazer um simples desafio ou CTF que se designa por “crackme”. Isto são programas especialmente feitos para testar as capacidades de RE. O objetivo do crackme é perceber como o programa funciona para podermos inserir a palavra passe certa sem termos isso guardado em texto em algum lado. No final inserimos a passe certa para confirmar que completamos o desafio.
+Vou pegar num exemplo básico para vermos como se faz.
+
+O nome deste programa é “keyg3nme” e vamos resolver em Linux. Resolução deste crackme foi tirada deste link.
+https://medium.com/@Asm0d3us/1-crackmes-one-beginner-friendly-reversing-challenges-6df94ea6b29d
+
+Comecemos por executar o comando file para determinar o tipo de ficheiro
+https://miro.medium.com/max/720/1*eKVYyzX9PVD4f6QtMaMqnQ.png
+
+Podemos então ver que keyg3nme é um binário executável de Linux. Adicionamos permissões de execução caso não haja.
+
+$ chmod +x keyg3nme
+
+Agora executamos o programa
+
+https://miro.medium.com/max/720/1*VxWW2xVIes4OBFYY3yCbjw.png
+
+Como podemos ver, não sabemos o que introduzir, e ataques de brute force não parecem fazer sentido aqui (para além de não ser o objetivo). 
+
+Executamos o comando strings para achar o texto claro existente no programa que poderá dar algumas dicas ou uma chave hardcoded. 
+https://miro.medium.com/max/720/1*kMSfVijiOhLlIujAM2RUkg.png
+
+- Enter your key :
+- Good job mate, now go keygen me - aparece quando a passe estiver certa
+- nope - aparece quando falha a passe
+Como podemos observar, não há nada mais além disso que nos ajude. Portanto só nos resta usar ferramentas dedicadas. Aqui usamos Ghidra, que para a dificuldade deste desafio, é um pouco overkill. Vamos abrir e analisar o programa. Selecionamos a função main do lado esquerdo do menu.
+
+https://miro.medium.com/max/640/1*IAtGAjAyU0mRUSlEYZPdrg.png
+
+E aqui temos pseudocódigo gerado. Tem aspeto muito sujo porque os nomes e tipos das variáveis não são os convencionais. Mas lendo com calma conseguimos chegar que local_14 é a chave que inserimos porque está no scanf. iVar1 é o resultado da validação da chave usando a função validate_key. Portanto só nos resta ver essa função.
+
+https://miro.medium.com/max/598/1*ypSPaH2Rje3nI15hh0e58Q.png
+
+Nota-se que a função no fundo verifica se a chave é um múltiplo de 1223 usando o módulo operador. Portanto inserindo 1223, por exemplo, vai resolver o desafio.
+
+https://miro.medium.com/max/720/1*JBfIi2iIdHI6xz6bwBmfiw.png
+
+Cá está e está concluído o desafio! Com este exemplo simples claramente vemos a vulnerabilidade mas esta metodologia aplica-se independentemente da escala.
+
+## DRM e Cracking
+
+Uma consequência da existência de ferramentas de RE é a possibilidade de circum navegar as proteções de conteúdos com direitos de autor, DRM para eventualmente virem parar nos sites de torrent e de vídeos online. Isto aplica-se mais a software pago como Photoshop e videojogos.
+Remover proteções DRM (especialmente de jogos com Denuvo) é uma das tarefas mais difíceis de RE. Atualmente existe só uma pessoa no mundo capaz de tirar este DRM da versão mais recente de Denuvo e é  [EMPRESS](https://www.wired.com/story/empress-drm-cracking-denuvo-video-game-piracy/).
+
+## Warez Scene
+
+Esta é uma rede subterrânea onde os maiores crackers partilham o conteúdo pirateado. Qualquer filme, série, anime, videojogo que seja pago ou tenha proteção DRM tem alta chance de se originar daqui. 
+Indivíduous ou equipas “na cena” compram o conteúdo que pretendem crackear e retiram as proteções. Ao lançar o conteúdo no que se designa por “Scene Release”, os autores deste lançamento costumam lançar um gráfico de arte em ASCII através de ficheiros .nfo onde podem fazer comentários, recrutar. Ganham crédito por estes lançamentos.
+
