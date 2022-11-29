@@ -35,7 +35,9 @@ Qualquer uma das seguintes aplicações de RE requer vasta experiência e, em al
 
 Os pontos 1 e 4 serão os principais a serem abordados.
 
-Assembly x86-64
+## Assembly x86-64
+
+![](/Imagens/Processo.png)
 
 (imagem)
 
