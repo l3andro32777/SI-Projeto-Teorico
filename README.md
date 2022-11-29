@@ -68,11 +68,11 @@ Ghidra é um competidor recente ao IDA Pro que foi lançado em 2019 e foi desenv
 Vamos agora fazer um simples desafio ou CTF que se designa por “crackme”. Isto são programas especialmente feitos para testar as capacidades de RE. O objetivo do crackme é perceber como o programa funciona para podermos inserir a palavra passe certa sem termos isso guardado em texto em algum lado. No final inserimos a passe certa para confirmar que completamos o desafio.
 Vou pegar num exemplo básico para vermos como se faz.
 
-O nome deste programa é “keyg3nme” e vamos resolver em Linux. Resolução deste crackme foi tirada deste link.
-https://medium.com/@Asm0d3us/1-crackmes-one-beginner-friendly-reversing-challenges-6df94ea6b29d
+O nome deste programa é “keyg3nme” e vamos resolver em Linux. Resolução deste crackme foi tirada deste [link](https://medium.com/@Asm0d3us/1-crackmes-one-beginner-friendly-reversing-challenges-6df94ea6b29d).
 
-Comecemos por executar o comando file para determinar o tipo de ficheiro
-https://miro.medium.com/max/720/1*eKVYyzX9PVD4f6QtMaMqnQ.png
+Comecemos por executar o comando file para determinar o tipo de ficheiro.
+
+![](https://miro.medium.com/max/720/1*eKVYyzX9PVD4f6QtMaMqnQ.png)
 
 Podemos então ver que keyg3nme é um binário executável de Linux. Adicionamos permissões de execução caso não haja.
 
@@ -80,7 +80,7 @@ $ chmod +x keyg3nme
 
 Agora executamos o programa
 
-https://miro.medium.com/max/720/1*VxWW2xVIes4OBFYY3yCbjw.png
+![](https://miro.medium.com/max/720/1*VxWW2xVIes4OBFYY3yCbjw.png)
 
 Como podemos ver, não sabemos o que introduzir, e ataques de brute force não parecem fazer sentido aqui (para além de não ser o objetivo). 
 
@@ -107,7 +107,7 @@ Cá está e está concluído o desafio! Com este exemplo simples claramente vemo
 ## DRM e Cracking
 
 Uma consequência da existência de ferramentas de RE é a possibilidade de circum navegar as proteções de conteúdos com direitos de autor, DRM para eventualmente virem parar nos sites de torrent e de vídeos online. Isto aplica-se mais a software pago como Photoshop e videojogos.
-Remover proteções DRM (especialmente de jogos com Denuvo) é uma das tarefas mais difíceis de RE. Atualmente existe só uma pessoa no mundo capaz de tirar este DRM da versão mais recente de Denuvo e é  [EMPRESS](https://www.wired.com/story/empress-drm-cracking-denuvo-video-game-piracy/).
+Remover proteções DRM (especialmente de jogos com Denuvo) é uma das tarefas mais difíceis de RE. Atualmente existe só uma pessoa no mundo capaz de tirar este DRM da versão mais recente de Denuvo e é [EMPRESS](https://www.wired.com/story/empress-drm-cracking-denuvo-video-game-piracy/).
 
 ## Warez Scene
 
