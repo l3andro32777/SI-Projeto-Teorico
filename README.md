@@ -43,6 +43,8 @@ Grande parte dos computadores - mais concretamente, os CPUs -, hoje em dia, util
 
 Indo pelo `processo inverso`, é necessário compreender `Assembly`, que pode não ser uma tarefa fácil. É uma linguagem intermédia (entre código-máquina e código-fonte). Cada arquitetura, linguagem de programação e compilador possuem `diferentes formas de gerar código-máquina`, o que significa que o código em Assembly também apresentará diferenças.
 
-No processo RE, normalmente, `uma pessoa não compreende o código-máquina`. Para isso, é necessária a posse de um *`Dissassembler`*, que mostra o código Assembly equivalente, sendo o `ponto de partida` para a compreensão do programa em causa.
+Em RE, normalmente, `código-máquina não é compreendido`. Para isso, é necessária a posse de um *`Dissassembler`*, que mostra o código Assembly equivalente, sendo o `ponto de partida` para a compreensão do programa em causa.
 Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que permitem a geração de `pseudocódigo`. Decompiladores são muito poderosos, pois utilizam técnicas avançadas de `deobfuscação` e heurísticas para `gerar (pseudo)código de alto nível`.
+
+![Processo de Engenharia Reversa](https://cdn.discordapp.com/attachments/855373378717351936/1047267281840902174/image.png)
 
