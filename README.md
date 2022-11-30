@@ -95,7 +95,7 @@ Encontramos estes:
 - Enter your key :
 - Good job mate, now go keygen me - aparece quando a passe estiver certa
 - nope - aparece quando falha a passe
-- 
+
 Como podemos observar, não há nada mais além disso que nos ajude. Portanto só nos resta usar ferramentas dedicadas. Aqui usamos Ghidra, que para a dificuldade deste desafio, é um pouco overkill. Vamos abrir e analisar o programa. Selecionamos a função main do lado esquerdo do menu.
 
 ![](https://miro.medium.com/max/640/1*IAtGAjAyU0mRUSlEYZPdrg.png)
@@ -104,11 +104,11 @@ E aqui temos pseudocódigo gerado. Tem aspeto muito sujo porque os nomes e tipos
 
 ![](https://miro.medium.com/max/598/1*ypSPaH2Rje3nI15hh0e58Q.png)
 
-Nota-se que a função no fundo verifica se a chave é um múltiplo de 1223 usando o módulo operador. Portanto inserindo 1223, por exemplo, vai resolver o desafio.
+Nota-se que a função no fundo verifica se a chave é um múltiplo de 1223 (0x4c7) usando o módulo operador. Portanto inserindo 1223, por exemplo, vai resolver o desafio.
 
 ![](https://miro.medium.com/max/720/1*JBfIi2iIdHI6xz6bwBmfiw.png)
 
-Cá está e está concluído o desafio! Com este exemplo simples claramente vemos a vulnerabilidade mas esta metodologia aplica-se independentemente da escala.
+Cá está e está concluído o desafio! Com este exemplo simples claramente vemos a vulnerabilidade envolvida. Esta metodologia aplica-se independentemente da escala.
 
 ## DRM e Cracking
 
