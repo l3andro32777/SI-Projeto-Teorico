@@ -78,9 +78,9 @@ Comecemos por executar o comando file para determinar o tipo de ficheiro.
 ![](https://miro.medium.com/max/720/1*eKVYyzX9PVD4f6QtMaMqnQ.png)
 
 Podemos então ver que keyg3nme é um binário executável de Linux. Adicionamos permissões de execução caso não haja.
-
+```
 $ chmod +x keyg3nme
-
+```
 Agora executamos o programa
 
 ![](https://miro.medium.com/max/720/1*VxWW2xVIes4OBFYY3yCbjw.png)
