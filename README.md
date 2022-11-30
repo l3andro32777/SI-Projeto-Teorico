@@ -30,7 +30,7 @@ RE é uma área muito especializada e requer um `conhecimento vasto de programa�
 Qualquer uma das seguintes aplicações de RE requer muita experiência e, em algumas, é necessário ser um perito:
 1. Encontrar vulnerabilidades, no intuito de melhorar a segurança de um programa;
 2. Analisar *malware*, quando os antivírus não possuem essa capacidade;
-3. Recriar funcionalidades de um programa ou o próprio;
+3. Recriar funcionalidades de um programa obsoleto ou porque já não é vendido;
 4. Crackear as defesas de DRM, para poder usar um programa, sem pagar pelo mesmo;
 5. Desenvolvimento de *cheats/trainers* para jogos.
 
