@@ -27,13 +27,13 @@ Serão, também, abordadas aplicações de RE, um exemplo prático e um outro te
 RE é uma área muito especializada e requer um `conhecimento vasto de programação e Assembly`.
 
 Qualquer uma das seguintes aplicações de RE requer vasta experiência e, em algumas, é necessário ser um perito:
-- 1 - Encontrar vulnerabilidades, no intuito de melhorar a segurança de um programa;
-- 2 - Analisar *malware*, quando antivírus não possuem essa capacidade;
-- 3 - Recriar funcionalidades de um programa ou o próprio;
-- 4 - Crackear as defesas de DRM, para poder usar um programa, sem pagar pelo mesmo;
-- 5 - Desenvolvimento de *cheats/trainers* para jogos.
+1. Encontrar vulnerabilidades, no intuito de melhorar a segurança de um programa;
+2. Analisar *malware*, quando antivírus não possuem essa capacidade;
+3. Recriar funcionalidades de um programa ou o próprio;
+4. Crackear as defesas de DRM, para poder usar um programa, sem pagar pelo mesmo;
+5. Desenvolvimento de *cheats/trainers* para jogos.
 
-Os pontos 1 e 4 serão os principais a serem abordados.
+Os pontos 1 e 4 serão os principais a serem abordados. Mas primeiro temos que perceber como é que funcionam os programas e como fazer engenharia reversa.
 
 ## Assembly x86-64
 
