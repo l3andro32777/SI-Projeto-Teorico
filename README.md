@@ -126,5 +126,5 @@ Este [post](https://reddit.com/r/CrackWatch/comments/92uz49/the_warez_scene_how_
 
 ## Conclusão
 
-Aprendemos o que é código Assembly e como podemos usar, para que serve engenharia reversa e as suas aplicações tal como um exemplo prático. Vimos também um efeito curioso que começou a desenvolver há mais de 20 anos a propagação de conteúdo pirateado e como relativamente escondido são as pessoas por detrás.
+Aprendemos o que é código Assembly e como podemos usar, para que serve engenharia reversa e as suas aplicações tal como um exemplo prático. Vimos também um efeito curioso que começou a desenvolver há mais de 20 anos a propagação de conteúdo pirateado e como relativamente escondido são as pessoas por detrás e a sua relação a RE.
 
