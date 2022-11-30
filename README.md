@@ -112,12 +112,12 @@ Cá está e está concluído o desafio! Com este exemplo simples claramente vemo
 
 ## DRM e Cracking
 
-Uma consequência da existência de ferramentas de RE é a possibilidade de circum navegar as proteções de conteúdos com direitos de autor, DRM para eventualmente virem parar nos sites de torrent e de vídeos online. Isto aplica-se mais a software pago como Photoshop e videojogos.
+Uma consequência da existência de ferramentas de RE é a possibilidade de circum navegar as proteções de conteúdos com direitos de autor, chamado DRM, para eventualmente virem parar nos sites de torrent e de vídeos online. Isto aplica-se mais a software pago como Photoshop e videojogos.
 Remover proteções DRM (especialmente de jogos com Denuvo) é uma das tarefas mais difíceis de RE. Atualmente existe só uma pessoa no mundo capaz de tirar este DRM da versão mais recente de Denuvo e é [EMPRESS](https://www.wired.com/story/empress-drm-cracking-denuvo-video-game-piracy/).
 
 ## Warez Scene
 
-Esta é uma rede subterrânea onde os maiores crackers partilham o conteúdo pirateado. Qualquer filme, série, anime, videojogo que seja pago ou tenha proteção DRM tem alta chance de se originar daqui. 
+É uma rede subterrânea onde os maiores crackers partilham o conteúdo pirateado. Qualquer filme, série, anime, videojogo que seja pago ou tenha proteção DRM tem alta chance de se originar daqui. 
 Indivíduous ou equipas “na cena” compram o conteúdo que pretendem crackear e retiram as proteções. Ao lançar o conteúdo no que se designa por “Scene Release”, os autores deste lançamento costumam lançar um gráfico de arte em ASCII através de ficheiros .nfo onde podem fazer comentários, recrutar. Ganham crédito por estes lançamentos.
 
 ![](https://defacto2.net/images/uuid/original/54acf284-7df8-4764-b5ba-00b80f534c26.png)
