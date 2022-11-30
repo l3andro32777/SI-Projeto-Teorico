@@ -104,7 +104,7 @@ E aqui temos pseudocódigo gerado. Tem aspeto muito sujo porque os nomes e tipos
 
 ![](https://miro.medium.com/max/598/1*ypSPaH2Rje3nI15hh0e58Q.png)
 
-Nota-se que a função no fundo verifica se a chave é um múltiplo de 1223 (0x4c7) usando o módulo operador. Portanto inserindo 1223, por exemplo, vai resolver o desafio.
+A função no fundo verifica se a chave é um múltiplo de 1223 (0x4c7) usando o módulo operador. Portanto inserindo 1223, por exemplo, vai resolver o desafio.
 
 ![](https://miro.medium.com/max/720/1*JBfIi2iIdHI6xz6bwBmfiw.png)
 
