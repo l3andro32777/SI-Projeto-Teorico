@@ -91,9 +91,11 @@ Como podemos ver, não sabemos o que introduzir, e ataques de brute force não p
 Executamos o comando strings para achar o texto claro existente no programa que poderá dar algumas dicas ou uma chave hardcoded. 
 ![](https://miro.medium.com/max/720/1*kMSfVijiOhLlIujAM2RUkg.png)
 
+Encontramos estes:
 - Enter your key :
 - Good job mate, now go keygen me - aparece quando a passe estiver certa
 - nope - aparece quando falha a passe
+- 
 Como podemos observar, não há nada mais além disso que nos ajude. Portanto só nos resta usar ferramentas dedicadas. Aqui usamos Ghidra, que para a dificuldade deste desafio, é um pouco overkill. Vamos abrir e analisar o programa. Selecionamos a função main do lado esquerdo do menu.
 
 ![](https://miro.medium.com/max/640/1*IAtGAjAyU0mRUSlEYZPdrg.png)
