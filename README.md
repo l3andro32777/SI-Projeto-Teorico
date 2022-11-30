@@ -48,7 +48,7 @@ Em seguida, podem ser utilizados um `Descompilador` e outras ferramentas, que pe
 
 ![Processo de Engenharia Reversa](https://cdn.discordapp.com/attachments/855373378717351936/1047267281840902174/image.png)
 
-Verifica-se claramente uma redução de complexidade e um aumento de compreensão 
+Verifica-se claramente uma redução de complexidade e um aumento de compreensão! 
 
 
 ## Ferramentas
