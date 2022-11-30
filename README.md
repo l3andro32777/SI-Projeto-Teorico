@@ -117,7 +117,7 @@ Remover proteções DRM (especialmente de jogos com Denuvo) é uma das tarefas m
 
 ## Warez Scene
 
-É uma rede subterrânea onde os maiores crackers partilham o conteúdo pirateado. Qualquer filme, série, anime, videojogo que seja pago ou tenha proteção DRM tem alta chance de se originar daqui. 
+É uma rede subterrânea onde os maiores crackers partilham o conteúdo pirateado. Qualquer filme, série, software, videojogo que seja pago ou tenha proteção DRM tem alta chance de se originar daqui. 
 Indivíduous ou equipas “na cena” compram o conteúdo que pretendem crackear e retiram as proteções. Ao lançar o conteúdo no que se designa por “Scene Release”, os autores deste lançamento costumam lançar um gráfico de arte em ASCII através de ficheiros .nfo onde podem fazer comentários, recrutar. Ganham crédito por estes lançamentos.
 
 ![](https://defacto2.net/images/uuid/original/54acf284-7df8-4764-b5ba-00b80f534c26.png)
